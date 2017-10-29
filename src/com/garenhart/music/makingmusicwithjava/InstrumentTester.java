@@ -1,19 +1,17 @@
 package com.garenhart.music.makingmusicwithjava;
 
-import com.sun.rowset.internal.Row;
 import jm.JMC;
-import jm.audio.AOException;
-import jm.audio.Instrument;
 import jm.constants.Instruments;
 import jm.constants.ProgramChanges;
-import jm.music.data.*;
+import jm.music.data.Part;
+import jm.music.data.Phrase;
+import jm.music.data.Score;
 import jm.util.Play;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.lang.reflect.Field;
-import java.lang.reflect.*;
 import javax.swing.*;
+import java.awt.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 
 public class InstrumentTester extends JFrame implements JMC {
     private JFrame mainFrame;
