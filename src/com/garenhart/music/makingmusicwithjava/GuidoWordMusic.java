@@ -5,8 +5,19 @@ import jm.music.data.*;
 import jm.util.*;
 
 /**
+ * GuidoWordMusic program is based on Guide s'Arezzo's lookup chart for generating pitches from syllables.
+ * In this case a lookup table below is used to generate a rhythm
+ * depending on the number of consonants between each vowel.
+ *
  * b3 c4 d4 e4 f4 g4 a4 b4 c5 d5 e5 f5 g5 a5 b5 c6
  * A  E  I  O  U  A  E  I  O  U  A  E  I  O  U  A
+ *
+ * NOTE: An input text must be passed as an argument,
+ * so either use command line java GuidoWordMusic "this is some text to make music out of"
+ * or from IntelliJ use Edit Configuration to add "this is some text to make music out of"
+ * to Program Arguments.
+ *
+ *
  */
 
 public class GuidoWordMusic implements JMC {
