@@ -5,7 +5,7 @@ import jm.music.data.*;
 import jm.util.*;
 
 /**
- * GuidoWordMusic program is based on Guide s'Arezzo's lookup chart for generating pitches from syllables.
+ * GuidoWordMusic program is based on Guide d'Arezzo's lookup chart for generating pitches from syllables.
  * In this case a lookup table below is used to generate a rhythm
  * depending on the number of consonants between each vowel.
  *
