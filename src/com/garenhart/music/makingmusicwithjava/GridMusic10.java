@@ -157,9 +157,10 @@ public class GridMusic10 implements JMC {
         Part temp = drums.copy();
         Mod.repeat(temp, this.repeats);
 
-/*       GH: Commenting out this loop because getVolume is not supported
-                in latest jMusic library (1.6.4.1)
 
+        // GH: Commenting out this loop because getVolume is not supported
+        // in latest jMusic library (1.6.4.1)
+/*
         // apply volume to note dynamic for each phrase
         for(int i=0; i<temp.size();i++) {
             Phrase phr = temp.getPhrase(i);
