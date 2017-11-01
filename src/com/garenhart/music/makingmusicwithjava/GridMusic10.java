@@ -205,11 +205,11 @@ public class GridMusic10 implements JMC {
      */ 
     public void samplePlay() {
         // set up instruments
-        Instrument hats = new SampleInst("blah.aif"); //Hats.au");
+        Instrument hats = new SampleInst("data/Hats.au");
         hats.setOutput(Instrument.REALTIME);
-        Instrument snare = new SampleInst("Snare.au");
+        Instrument snare = new SampleInst("data/Snare.au");
         snare.setOutput(Instrument.REALTIME);
-        Instrument kick = new SampleInst("Kick.au");
+        Instrument kick = new SampleInst("data/Kick.au");
         kick.setOutput(Instrument.REALTIME);
         Instrument[] kit = {hats, snare, kick};
         // extend notes to occupy rests
@@ -225,9 +225,9 @@ public class GridMusic10 implements JMC {
      */
     public void saveSampleFile(String fileName) {
         // set up instruments
-        Instrument hats = new SampleInst("Hats.au");
-        Instrument snare = new SampleInst("Snare.au");
-        Instrument kick = new SampleInst("Kick.au");
+        Instrument hats = new SampleInst("data/Hats.au");
+        Instrument snare = new SampleInst("data/Snare.au");
+        Instrument kick = new SampleInst("data/Kick.au");
         Instrument[] kit = {hats, snare, kick};
 
         writeAudio(updatedPart(), fileName, kit);
