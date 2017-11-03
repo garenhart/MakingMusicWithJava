@@ -14,7 +14,7 @@ import jm.util.*;
  *
  * NOTE: An input text must be passed as an argument,
  * so either use command line java GuidoWordMusic "this is some text to make music out of"
- * or from IntelliJ use Edit Configuration to add "this is some text to make music out of"
+ * or from IntelliJ use Run->Edit Configuration to add "this is some text to make music out of"
  * to Program Arguments.
  *
  *

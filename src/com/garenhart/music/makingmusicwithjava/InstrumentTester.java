@@ -116,6 +116,7 @@ public class InstrumentTester extends JFrame implements JMC {
 
         // This overloaded method allows to avoid holding up the program
         // while playing, if second parameter is set to false - GH
-        Play.midi(score, false, false, 1, 0);
+        // Play.midi(score, false, false, 1, 0);
+        Play.midi(score, false);
     }
 }

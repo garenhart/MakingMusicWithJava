@@ -116,7 +116,7 @@ public class GridMusic10 implements JMC {
     
     /**
     * Playback the music using JavaSound internal synth sounds.
-    */ 
+    */
     public void play() {
         Play.midi(updatedPart(), false);
     }
@@ -125,9 +125,9 @@ public class GridMusic10 implements JMC {
     */
     public void setHatVolume(int val) {
         // GH: Substitute setDynamic for setVolume, because setVolume doesn't exist
-        // in the latest version of jMusic library (1.6.4.1)
-        hats.setDynamic(val);
-        // hats.setVolume(val);
+        // in jMusic library 1.6.3 or newer.
+        // hats.setDynamic(val);
+         hats.setVolume(val);
     }
     
      /**
@@ -135,9 +135,9 @@ public class GridMusic10 implements JMC {
     */
     public void setSnareVolume(int val) {
         // GH: Substitute setDynamic for setVolume, because setVolume doesn't exist
-        // in the latest version of jMusic library (1.6.4.1)
-        snare.setDynamic(val);
-        // snare.setVolume(val);
+        // in jMusic library 1.6.3 or newer.
+        // snare.setDynamic(val);
+         snare.setVolume(val);
     }
     
      /**
@@ -145,9 +145,9 @@ public class GridMusic10 implements JMC {
     */
     public void setKickVolume(int val) {
         // GH: Substitute setDynamic for setVolume, because setVolume doesn't exist
-        // in the latest version of jMusic library (1.6.4.1)
-        kick.setDynamic(val);
-        // kick.setVolume(val);
+        // in jMusic library 1.6.3 or newer.
+        // kick.setDynamic(val);
+        kick.setVolume(val);
     }
     
     /**
@@ -160,13 +160,13 @@ public class GridMusic10 implements JMC {
 
         // GH: Commenting out this loop because getVolume is not supported
         // in latest jMusic library (1.6.4.1)
-/*
+
         // apply volume to note dynamic for each phrase
         for(int i=0; i<temp.size();i++) {
             Phrase phr = temp.getPhrase(i);
             phr.setDynamic(phr.getVolume());
         }
-*/
+
         return temp;
     }
     
