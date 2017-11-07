@@ -31,6 +31,13 @@ public class HelperIO {
         return dir;
     }
 
+    public static void writeXml(Score score, String fileName) {
+        // Create "data/out" subdirectory if doesn't exist
+        File dir = createOutputDirectory();
+
+        Write.xml(score, dir.getPath() + "/" + fileName);
+    }
+
     public static void writeMidi(Score score, String fileName) {
         // Create "data/out" subdirectory if doesn't exist
         File dir = createOutputDirectory();
