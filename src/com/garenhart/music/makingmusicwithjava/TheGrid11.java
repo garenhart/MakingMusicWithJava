@@ -64,6 +64,9 @@ public class TheGrid11 implements JMC, ItemListener, ActionListener, ChangeListe
     */
     private void makeInterface() {
         window = new JFrame("Drum Pattern");
+        // GH: Adding default close operation,
+        // otherwise the app stays active after closing the interface.
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setLayout(new BorderLayout());
         JPanel windowPanel = new JPanel(new BorderLayout());
         // numbers
