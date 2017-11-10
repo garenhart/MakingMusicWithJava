@@ -6,6 +6,9 @@ import jm.util.*;
 import jm.music.tools.Mod;
 import jm.audio.*;
 
+import static com.garenhart.music.makingmusicwithjava.HelperIO.writeAudio;
+import static com.garenhart.music.makingmusicwithjava.HelperIO.writeMidi;
+
 // Added setHatVolume etc. fields and methods
 // Change default tempo to 100
 // Extend notes on sample playback with Mod.fillRests
@@ -108,7 +111,7 @@ public class GridMusic11 implements JMC {
     * @param fileName The name of the MIDI file, usually ending in .mid
     */
     public void saveFile(String fileName) {
-        Write.midi(updatedPart(), fileName);
+        writeMidi(updatedPart(), fileName);
     }
     
     /**
@@ -182,7 +185,7 @@ public class GridMusic11 implements JMC {
         Instrument kick = new TR808KickInst(44100);
         Instrument[] kit = {hats, snare, kick};
 
-        Write.au(updatedPart(), fileName, kit);
+        writeAudio(updatedPart(), fileName, kit);
     }   
     
     /**
@@ -215,6 +218,6 @@ public class GridMusic11 implements JMC {
         Instrument kick = new SampleInst("Kick.au");
         Instrument[] kit = {hats, snare, kick};
 
-        Write.au(updatedPart(), fileName, kit);
+        writeAudio(updatedPart(), fileName, kit);
     }
   }
