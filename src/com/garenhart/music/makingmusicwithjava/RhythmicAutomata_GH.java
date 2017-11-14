@@ -55,7 +55,7 @@ public class RhythmicAutomata_GH implements JMC{
 
     private void makePart(Part part1, int pitch) {
         /* fill array */
-        initialise();
+        initialBar();
         makeMusic(part1, pitch);
 
         /* calc next array */
@@ -68,7 +68,7 @@ public class RhythmicAutomata_GH implements JMC{
     /**
     * Fill the bar with randomly set values
     */
-    private void initialise() {
+    private void initialBar() {
         System.out.println();
         System.out.println("====== Initialising automata array ======");
         for(int i=0; i<barLength; i++) {
