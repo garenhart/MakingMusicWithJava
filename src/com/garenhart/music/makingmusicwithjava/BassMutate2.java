@@ -5,16 +5,16 @@ import jm.music.data.*;
 import jm.util.*;
 
 public class BassMutate2 implements JMC {
-    Phrase bassLine1 = new Phrase(0.0);
-    Phrase bassLine2 = new Phrase(0.0);
-    int phraseSize = 16;
-    int[] availablePitches = {36, 36, 40, 43, 45, 48, 48, 52, 55, REST, REST, REST};
+    private Phrase bassLine1 = new Phrase(0.0);
+    private Phrase bassLine2 = new Phrase(0.0);
+    private int phraseSize = 16;
+    private int[] availablePitches = {36, 36, 40, 43, 45, 48, 48, 52, 55, REST, REST, REST};
 	
     public static void main(String[] args) {
         new BassMutate2();
     }
 	
-    public BassMutate2() {
+    private BassMutate2() {
         Part bassPart = new Part(SYNTH_BASS);
         bassPart.setTempo(130.0);
         // create parent phrase 1
