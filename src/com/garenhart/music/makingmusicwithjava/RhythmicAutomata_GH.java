@@ -48,7 +48,7 @@ public class RhythmicAutomata_GH implements JMC{
         score.addPart(part3);
         
         /* save as a MIDI file */
-        writeMidi(score, "RhythmicAutomata.mid");
+        writeMidi(score, "RhythmicAutomata_GH.mid");
         
         Play.midi(score);
     }
