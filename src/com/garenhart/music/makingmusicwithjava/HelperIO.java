@@ -3,6 +3,7 @@ package com.garenhart.music.makingmusicwithjava;
 import jm.audio.Instrument;
 import jm.music.data.Part;
 import jm.music.data.Score;
+import jm.util.View;
 import jm.util.Write;
 
 import java.io.File;
@@ -75,10 +76,25 @@ public class HelperIO {
         Write.au(s, dir.getPath() + "/" + fileName, instList);
     }
 
+    public static void writeAudio(Score s, String fileName, Instrument instrument) {
+        // Create "data/out" subdirectory if doesn't exist
+        File dir = createOutputDirectory();
+
+        Write.au(s, dir.getPath() + "/" + fileName, instrument);
+    }
+
     public static void writeAudio(Part p, String fileName, Instrument[] instList) {
         // Create "data/out" subdirectory if doesn't exist
         File dir = createOutputDirectory();
 
         Write.au(p, dir.getPath() + "/" + fileName, instList);
     }
+
+    public static void viewAudio(String fileName) {
+        // View audio file from "data/out" subdirectory
+        File dir = createOutputDirectory();
+
+        View.au(dir.getPath() + "/" + fileName);
+    }
+
 }
