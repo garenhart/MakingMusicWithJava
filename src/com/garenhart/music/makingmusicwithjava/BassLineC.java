@@ -14,9 +14,21 @@ public class BassLineC extends RTLine {
 	public BassLineC (Instrument[] instArray) {
 		super(instArray);
 	}
+
+    /**
+     * Generate the next note when requested.
+     */
+    // @Override
+    public Note getNextNote() {
+        return getNote();
+    }
+
     /**
     * Generate the next note when requested.
     */
+    // looks like this method has been replaced with abstract getNextNote,
+    // so let's add getNextNote and call getNote from there.
+    // This way the class will be compatible with both versions (1.6.2 and 1.6.4.1)
     public synchronized Note getNote() {
         n.setPitch(pitch + intervals[(int)(Math.random() * intervals.length)]);
         n.setDynamic((int)(Math.random()* 5 + 120)); 
@@ -24,8 +36,8 @@ public class BassLineC extends RTLine {
         n.setRhythmValue((int)(Math.random() * 2 + 1) * 0.25);
         n.setDuration(n.getRhythmValue() * 0.9);
         return n;
-    }	
-    
+    }
+
     // added for control change
     public synchronized void externalAction(Object obj, int actionNumber){
         if(actionNumber == 1){
@@ -36,4 +48,5 @@ public class BassLineC extends RTLine {
             }
         }
     }
+
 }

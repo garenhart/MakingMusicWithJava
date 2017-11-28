@@ -14,6 +14,15 @@ public class BassLineA extends RTLine {
     public BassLineA (Instrument[] instArray) {
 	super(instArray);
     }
+
+    /**
+     * Generate the next note when requested.
+     */
+    //@Override
+    public Note getNextNote() {
+        return getNote();
+    }
+
     /**
     * Generate the next note when requested.
     */
@@ -25,4 +34,5 @@ public class BassLineA extends RTLine {
         n.setDuration(n.getRhythmValue() * 0.9);
         return n;
     }	
+
 }
